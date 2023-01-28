@@ -1,18 +1,31 @@
 import './style.scss'
 import paintHomePage from './home'
-import { newElement } from './utilities'
+import { newElement, clearMarkup } from './utilities'
 
 // NAVBAR
 
 const nav = newElement('nav')
 const navOptions = newElement('div', ['nav-options'])
-const navLinks = [['Home', '#'], ['Menu', '#'], ['About', '#']]
+const navLinks = ['Home', 'Menu', 'About']
 
-for (let i = 0; i < navLinks.length; i++) {
-  let navLink = newElement('a')
-  navLink.textContent = navLinks[i][0]
-  navLink.href = navLinks[i][1]
+for (let navLinkText of navLinks) {
+  let navLink = newElement('button')
+  navLink.textContent = navLinkText
   navOptions.appendChild(navLink)
+
+  navLink.addEventListener('click', () => {
+    clearMarkup()
+
+    switch(navLinkText) {
+      case 'Home':
+        paintHomePage()
+        break
+      case 'Menu':
+        break
+      case 'About':
+        break
+    }
+  })
 }
 
 nav.appendChild(navOptions)

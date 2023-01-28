@@ -30,6 +30,13 @@ body {
     margin: 0;
 }
 
+button {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+}
+
 nav {
     background-color: rgba(32, 82, 149, 0.85);
     margin-bottom: 16px;
@@ -37,12 +44,13 @@ nav {
     display: flex;
     align-items: center;
 
-    a {
+    button {
         font-family: goldmanbold, sans-serif;
         font-size: 1.3rem;
         color: white;
         text-decoration: none;
         transition-duration: 0.5s;
+        transition-property: transform;
         text-transform: uppercase;
 
         &:hover {
