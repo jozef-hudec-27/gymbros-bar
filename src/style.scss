@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'goldmanbold';
+    src: url('./assets/goldman-bold.woff2') format('woff2'),
+         url('./assets/goldman-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: goldmanbold;
+}
+
+.logo {
+    flex: auto;
+    box-sizing: border-box;
+    width: 164px;
+    height: 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 50%;
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 64px;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    max-width: 66%;
+    margin: 0 auto;
+    gap: 8px;
+}
+
+.info-wrapper {
+    border: 1px solid black;
+    max-width: 50%;
+    padding: 16px;
+}
