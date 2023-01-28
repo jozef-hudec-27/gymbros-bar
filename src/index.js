@@ -1,6 +1,7 @@
 import './style.scss'
 import paintHomePage from './home'
 import paintMenuPage from './menu'
+import paintAboutPage from './about'
 import { newElement, clearMarkup } from './utilities'
 
 // NAVBAR
@@ -25,6 +26,7 @@ for (let navLinkText of navLinks) {
         paintMenuPage()
         break
       case 'About':
+        paintAboutPage()
         break
     }
   })
