@@ -1,5 +1,5 @@
 import './style.scss'
-import Logo from './assets/logo.svg'
+import Logo from './assets/images/logo.svg'
 
 console.log('Hello from index.js')
 
