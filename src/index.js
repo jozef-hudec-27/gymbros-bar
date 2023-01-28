@@ -1,6 +1,4 @@
 import './style.scss'
-import Logo from './assets/images/logo.svg'
+import paintHomePage from './home'
 
-console.log('Hello from index.js')
-
-document.querySelector('.logo img').src = Logo
+paintHomePage()
