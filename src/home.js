@@ -7,7 +7,7 @@ export default function() {
 
   // MAIN WRAPPER
 
-  const main = newElement('div', ['main'])
+  const main = newElement('main', ['main'])
   content.appendChild(main)
   
 
@@ -61,7 +61,7 @@ export default function() {
     let title = infoWrappers[i].title
     let html = infoWrappers[i].html
 
-    let infoWrapper = newElement('div', ['info-wrapper'])
+    let infoWrapper = newElement('section', ['info-wrapper'])
 
     let infoWrapperHeading = newElement('h2')
     infoWrapperHeading.textContent = title

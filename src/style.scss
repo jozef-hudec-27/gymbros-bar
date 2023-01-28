@@ -27,6 +27,38 @@ body {
     background-image: url('./assets/images/bg.jpg');
     background-position: center;
     background-size: cover;
+    margin: 0;
+}
+
+nav {
+    background-color: rgba(32, 82, 149, 0.85);
+    margin-bottom: 16px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+
+    a {
+        font-family: goldmanbold, sans-serif;
+        font-size: 1.3rem;
+        color: white;
+        text-decoration: none;
+        transition-duration: 0.5s;
+        text-transform: uppercase;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .nav-options {
+        display: flex;
+        gap: 24px;
+        margin: 0 auto;
+    }
+}
+
+#content {
+    padding-bottom: 16px;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -76,7 +108,7 @@ h1, h2, h3 {
     margin: 0 auto;
     gap: 8px;
     border-radius: 16px;
-    background-color: rgba(44, 116, 179, 0.85);
+    background-color: rgba(44, 116, 179, 0.8);
     padding: 16px 0;
 }
 
@@ -92,6 +124,6 @@ h1, h2, h3 {
 
 @media (max-width: 700px) {
     .main {
-        max-width: 100%;
+        max-width: 95%;
     }
 }
