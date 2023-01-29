@@ -1,4 +1,5 @@
 import { newElement, appendChildrenTo } from "./utilities"
+import Ronnie from './assets/images/ronnie.jpg'
 
 export default function() {
   const content = document.getElementById('content')
@@ -18,7 +19,7 @@ export default function() {
 
   // ABOUT US CONTENT
 
-  const descWrapper = newElement('section', ['about-us'])
+  const aboutUsWrapper = newElement('section', ['about-us'])
 
   const p1 = newElement('p')
   p1.textContent = `
@@ -44,6 +45,17 @@ export default function() {
   p5.textContent = `
     At Gymbro's Bar, we are committed to providing our customers with the best possible experience. Our friendly, knowledgeable staff is always on hand to answer any questions you may have and provide you with the support you need to achieve your fitness and health goals.
   `
-  appendChildrenTo(descWrapper, [p1, p2, p3, p4, p5])
-  main.appendChild(descWrapper)
+
+  const founderImg = newElement('img')
+  founderImg.src = Ronnie
+  founderImg.alt = 'Ronnie Coleman'
+
+  const founderPara = newElement('p', ['founder-para'])
+  founderPara.textContent = 'Ronnie Coleman, founder'
+
+  const founderWrapper = newElement('div', ['founder-wrapper'])
+  appendChildrenTo(founderWrapper, [founderImg, founderPara])
+
+  appendChildrenTo(aboutUsWrapper, [p1, p2, p3, p4, p5, founderWrapper])
+  main.appendChild(aboutUsWrapper)
 }

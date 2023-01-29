@@ -3,6 +3,17 @@ import paintHomePage from './home'
 import paintMenuPage from './menu'
 import paintAboutPage from './about'
 import { newElement, clearMarkup } from './utilities'
+import Favicon from './assets/images/favicon.png'
+
+// FAVICON
+
+const faviconLink = newElement('link')
+faviconLink.rel = 'icon'
+faviconLink.type = 'image/x-icon'
+faviconLink.href = Favicon
+
+document.head.appendChild(faviconLink)
+
 
 // NAVBAR
 
